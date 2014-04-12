@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html xml:lang="tw" xmlns:fb="http://ogp.me/ns/fb#" lang="tw"><head>
+                <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>标题</title>
+        <meta property="og:title" content="">
+        <meta name="description" content="">
+        <meta property="og:description" content="">
+        <link rel="canonical" href="//en/www/xincai888.com">
+        <link href="/static/css/woocss.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript">var ac_vars = [];</script>
+        {% include "analytics.html" %}
+    </head>
+    <body lc="i" class="review lang-tw" itemscope="" itemtype="http://schema.org/WebPage" lang="tw">
+    
+	<div style="margin-top: 50px;" fake-offset="50" id="top">
+    <header>
+        <h1 class="span5">
+            <a title="title" href="//">title link</a>
+        </h1>
+        <nav id="menu-container" class="span14 offset1">
+            <a href="/">网站统计</a>
+            <a href="/alexa/">ALEXA排名分析</a>
+            <a href="/">关键词排名分析</a>
+            <a href="#" class="current">关键词分析</a>
+        </nav>
+            <form action="//tw/login/check" method="post" id="login-container" class="span12 offset13">
+        <div>
+            <div class="span11">
+                <div class="span4 relative">
+                    <input name="username_email" id="login-mail" placeholder="Email" type="text">
+                </div>
+                <div class="span4 relative">
+                    <input name="password" id="login-pass" value="" placeholder="Password" type="password">
+                    <a data-original-title="Click here to reset your password." class="simple-tooltip" data-placement="bottom" href="//tw/login/forgot">
+                        <i class="icon-questionmark"></i>
+                    </a>
+                </div>
+                <div class="span3 relative">
+                    <button type="submit" class="link">登录&nbsp;&nbsp;<i class="icon-woouser icon-white"></i></button>
+                </div>
+            </div>
+        </div>
+    </form>
+         
+<div id="lang-container" class="offset25 span2">
+    <span>注册</span>
+</div>
+</header>
+</div>	<div id="content" itemprop="mainContentOfPage">
+        <div id="grid">
+        <form id="generate-report" class="ajax-generate-report generate-form to-validate " action="/tw/report/generate" method="post">
+    <div class="inputs span12">
+        <div id="gen-inputs-container">
+            <div class="span12">
+                <label for="generate-report-input" class="over-input-label for-main-input hidden">我的網站.com</label>
+                <input class="required input-label" id="generate-report-input" name="url" value="xincai888.com" type="text">
+                <div class="comp-button">
+                                        <i class="icon-plus" onclick="_gaq.push(['_trackEvent', 'Free', 'competitors-interest-tw', $('#generate-report-input').val()]);">添加競爭對手</i>
+                    <i class="icon-minus hidden">close</i>
+                </div>
+            </div>
+                            <div class="span15">
+                    <p class="comp-convert"><a href="//#pricing" onclick="_gaq.push(['_trackEvent', 'Free', 'competitors-interest-click-tw', $('#generate-report-input').val()]);">Take a plan to add <span class="hand-write-2 orange">competitors</span>.</a></p><p>
+                </p></div>
+                    </div>
+    </div>
+    <div class="span6 button-container">
+            <button type="submit" class="black submit span6 gen-report" id="generate" value="free" name="generate" onsubmit="_gaq.push(['_trackEvent', 'Free', 'report-gen-tw', $('#generate-report-input').val()]);" onclick="_gaq.push(['_trackEvent', 'Free', 'report-gen-tw', $('#generate-report-input').val()]);">
+            <span>Website Review</span>
+            <span class="wait">Please wait...</span>
+        </button>
+            </div>     
+</form><div id="left-nav" class="span5 no-margin">
+            <div class="is-flying" style="position: fixed; top: 80px;" id="flying">
+                            <div id="left-grey-mask"></div>
+                        <div class="nav-section active" id="review">
+                <a class="section-title" href="/users/{{ username }}">{{ username }}的网站</a>
+                                    <nav id="review-navigation" class="inpage">
+                        <!--<a class="score" href="#dashboard"><span>前5個優先事項</span></a>
+                        <a class="social" href="#module-social"><span>社交監控</span></a>
+                        <a class="mobile current" href="#module-mobile"><span>移動設備</span></a>
+                        <a class="seo" href="#module-seo"><span>SEO</span></a>
+                        <a class="usability" href="#module-usability"><span>可用性</span></a>
+                        <a class="technologies" href="#module-technologies"><span>技術</span></a>-->
+                        {% for site in seosite %}
+                            <a class="seo" href="/site/{{ site.id }}" target="_blank"><span>{{ site.sitename }}</span></a>
+                        {% endfor %}
+                    </nav>
+                            </div>
+                    </div>
+    </div>
+<div id="right-panel" class=" free-rev">
+<div id="dashboard" class="hreview">
+            
+    <div id="dashboard-content" class="row" itemprop="review" itemscope="" itemtype="http://schema.org/Review">
+        
+        <div id="dashboard-screenshot" class="span6">
+
+        </div>
+        
+        <div id="dashboard-site" class="span11 offset1">
+            <h1 class="item" itemprop="name">
+                <span class="reviewer hidden">Alexa</span>
+                {{ username }}所属网站最新ALEXA环比数据
+            </h1>
+            <span class="generated-time dtreviewed">
+            <span class="">
+                {% for alexa in alexasite %}
+                    {{ alexa.web_site }} {{ alexa.alexasum }} {{ alexa.alexaday }}
+                {% endfor %}
+            </span>
+           </span>
+</div>
+</div>
+
+    </div>
+<div style="display: block;" id="report-priorities">
+    <h2>您的网站的首要任务：</h2>
+    <div class="row">
+        <ol class="span13 no-margin"><a href="#criterium-mobile_optimization"><li id="quick-win-1" quick-wins"=""><i></i>為移動通信瀏覽優化您的網站</li></a>
+        <a class="external-link" href="https://www.manycontacts.com/" rel="nofollow" target="_blank">
+            <li><i></i>Convert your visitors with a ManyContacts bar </li>
+        </a>
+    <a href="#criterium-twitter_account"><li id="quick-win-2" quick-wins"=""><i></i>預訂在Twitter上的品牌</li></a><a href="#criterium-social_impact"><li id="quick-win-3" quick-wins"=""><i></i>在社交媒體上推廣您的網站</li></a><a href="#criterium-inpage_keywords"><li id="quick-win-4" quick-wins"=""><i></i>讓您的關鍵字更加一致</li></a></ol>
+                    <a data-original-title="" class="span7 offset1 relative convert simple-tooltip" data-placement="top" rel="tooltip" href="https://www.woorank.com/tw/register/plan/v2pro/optimize" onclick="_gaq.push(['_trackEvent', 'Report', 'click-view-more-tasks', wooLang + ':v1']);">
+                <p class="big">
+                    Optimize <br>
+xincai888.com&nbsp;!                </p>
+                <p>
+                     129 personalized tasks for<br>
+online marketing success!                </p>                
+                                    <button class="button submit orange span7 no-margin">
+                        Start Your Free Trial                    </button>
+                            </a>
+    </div>
+            <div class="show-more-task row">
+            <div class="span13">
+                <a href="https://www.woorank.com/tw/register/plan/v2pro">
+                    Show all tasks                    <i class="icon-plus"></i>
+                </a>
+                <i class="icon-arrow-little hidden"></i>
+            </div>
+        </div>
+    </div><div id="report-content">
+        
+        
+        
+        
+        <div class="module" id="module-social">
+            <h2>社交監控</h2>
+<div id="criterium-social_impact" class="criterium result-3 ">
+    <div class="criterium-head span6">
+        
+
+        <h3 class="simple-tooltip" data-placement="left" rel="tooltip" data-original-title="重要的錯誤需要修復">
+            社交影響力
+        </h3>
+
+            <div class="icons">
+                <i class="importance-3 simple-tooltip" data-placement="top" rel="tooltip" data-original-title="高度影響">高度影響</i>
+                <i class="solvability-2 simple-tooltip" data-placement="top" rel="tooltip" data-original-title="難解決">難解決</i>
+            </div>
+    </div>
+    <div class="criterium-content span15">
+                <div class="part text competitor-hide">
+                    <p itemprop="interactionCount">提高您的網站知名度：您的網站在社交網絡上不是非常受歡迎。</p>
+                </div> 
+                <div class="part text competitor-to-process">
+                    <p itemprop="interactionCount"><span class="big-right-aligned icon fb_likes">Facebook喜好</span><span class="big-right-aligned-content">0</span></p>
+                    <p itemprop="interactionCount"><span class="big-right-aligned icon plus_one">Google™ +</span><span class="big-right-aligned-content">0</span></p>
+                    <p itemprop="interactionCount"><span class="big-right-aligned icon fb_shares">Facebook分享</span><span class="big-right-aligned-content">0</span></p>
+                    <p itemprop="interactionCount"><span class="big-right-aligned icon fb_comm">Facebook評論</span><span class="big-right-aligned-content">0</span></p>
+                </div> 
+    </div>
+        <div class="criterium-advice">
+            
+            <p>社交媒體對於某些行業的影響力很大。<a rel="nofollow" href="http://www.hootsuite.com/">監測</a>人們在社交媒體上如何談論您的網站以及<a rel="nofollow" href="http://www.dialogfeed.com/?utm_source=woorank&amp;utm_medium=affiliation&amp;utm_content=in%2Breport&amp;utm_campaign=woorank%2Baffiliation" target="_blank">在您的網站上公佈社交對話以此優化您的網站影響力</a>。注：此數據是從您網站的網址追踪它的社會媒體的影響力，並不代表特定品牌的網頁。</p>
+        </div>
+</div>
+<div id="social-sharing-box" class="share">
+            <a class="facebook" href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p[images][0]=http%3A%2F%2Fcdn1.woorank.com%2Fassets%2Fimg%2Fshade.png&amp;p[url]=http%3A%2F%2Fwww.woorank.com%2Ftw%2Fwww%2Fxincai888.com&amp;p[title]=I+just+got+a+quick+guide+to+improving+my+website%21&amp;p[summary]=Check+out+my+%23WooRank+website+review%21+Want+to+see+how+your+website+ranks%2C+too%3F+Make+one+for+your+site+at+www.WooRank.com+today%21" rel="nofollow" target="_blank">facebook</a>
+            <a class="twitter" href="http://twitter.com/home?status=Check+out+my+%40WooRank+website+review%21+woo.lv%2Ft%2Fxincai888.com+Make+one+for+your+site+at+WooRank.com+today%21+%23WooRank" rel="nofollow" target="_blank">twitter</a>
+            <a class="googleplus" href="https://plus.google.com/share?url=http%3A%2F%2Fwww.woorank.com%2Ftw%2Fwww%2Fxincai888.com" rel="nofollow" target="_blank">googleplus</a>
+            <a class="linkedin" href="http://www.linkedin.com/shareArticle?mini=true&amp;source=WooRank&amp;url=http%3A%2F%2Fwww.woorank.com%2Ftw%2Fwww%2Fxincai888.com&amp;title=I+just+got+a+quick+guide+to+improving+my+website%21&amp;summary=Check+out+my+%23WooRank+website+review%21+Want+to+see+how+your+website+ranks%2C+too%3F+Make+one+for+your+site+at+www.WooRank.com+today%21" rel="nofollow" target="_blank">linkedin</a>
+    </div>    <div class="hidden" id="get-manycontact-quick-wins">
+        <a class="external-link" href="https://www.manycontacts.com/" rel="nofollow" target="_blank">
+            <li><i></i>Convert your visitors with a ManyContacts bar </li>
+        </a>
+    </div>
+    </div>
+ 
+        </div>
+	</div>	 
+	<footer>
+    <ul class="row">
+        <li class="span6">
+            <ul>
+                <li>
+                    <a href="//tw/faq">FAQ</a>
+                </li>
+                <li>
+                                        <a href="//#pricing">Pricing</a>
+                                    </li>
+                <li>
+                    <a href="http://blog.woorank.com/category/woonews/">Latest Updates</a>
+                </li>
+                <li>
+                    <a href="//tw/jobs/">Jobs</a>
+                </li>
+            </ul>
+        </li>
+        <li class="span8">
+            <ul>
+                <li>
+                    <a href="http://blog.woorank.com/" target="_blank">博客</a>
+                </li>
+                <li>
+                    <a href="//tw/p/developers">Tools for Developers &amp; Bloggers</a>
+                </li>
+                <li>
+                    <a href="//tw/lp/free-online-marketing-training" target="_BLANK">Free Online Marketing Training</a>
+                </li>
+                <li>
+                                        <a href="//tw/p/recent">最近的報告</a>
+                                    </li>
+            </ul>            
+        </li>
+        <li class="span6">
+            <ul>
+                <li>
+                    <a href="//tw/p/about">關於我們</a>
+                </li>
+                <li>
+                    <a href="//tw/p/privacy">Privacy</a>
+                </li>
+                <li>
+                    <a href="//tw/p/tos">Terms of Service</a>
+                </li>
+                                <li id="copyright">Copyright © 2013</li>
+            </ul>              
+        </li>
+        <li class="span5 offset3">
+            <ul>
+                <li class="ipad">
+                    <a href="https://itunes.apple.com/app/woorank/id595645104" target="_blank" rel="nofollow" title="WooRank for iPad!">
+                        <img src="/ipad-store.png" alt="Available on the ipad app store." height="50" width="152">
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</footer>    
+<script type="text/javascript" src="/static/js/jq-btsp.js"></script>
+<script type="text/javascript" src="/static/js/review.js"></script>
+</body></html>

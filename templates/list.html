@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>{{ category.title }}-新财网</title>       
+        <meta name="keywords" content="{{ category.keywords }}" />
+        <meta name="description" content="{{ category.description }}" />
+        <link href="/static/css/main.css" rel="stylesheet" type="text/css" />
+        <link href="/static/css/NewsDetail.css" type="text/css" rel="stylesheet" media="all" />
+        <link rel="stylesheet" href="/static/css/lib.css" type="text/css" />
+        <link rel="stylesheet" href="/static/css/oricss.css" type="text/css" />
+        <link rel="stylesheet" href="/static/css/base.css" type="text/css" />
+        <link rel="stylesheet" href="/static/css/header.css" type="text/css" />
+        <style type="text/css" rel="stylesheet" media="all">
+            .n1000,.n1001,.n1002,.n1003,.n1004,.n1005,.n1006,.n1007,.n1008,.n1009,.n1010,.n1011,.n1012,.n1013,.n1014,.n1015,.n1016,.n1017,.n1018,.n1019,.n1020{color:#fff;float:left;height:0px; *overflow:hidden;}
+         </style>
+        {% include "analytics.html" %}
+        {% include "dfpright.html" %}
+    </head>
+    <body>
+
+<div class="header">
+ <div class="area clearfix">
+    <div class="logo">
+        <div><h1 style="font-size:24px;">新财网</h1></div>
+        <div><p>专业，源于专注</p></div>
+    </div>
+    <div class="login_info fr" id="NotLogin">
+            <p>咨询热线：0571-88888888</p>
+            <p>http://www.xincai888.com</p>
+    </div>
+ </div>
+</div>
+        <div class="menu" style="height:auto;">
+            <div class="area">
+                <div class="menu">
+                    <div class="area">
+                        <div class="nav">
+                            <ul class="clearfix">
+                                <li id="li0"><a href="/" target="_blank"><span>首页</span></a></li>
+                                <li id="li1"><a href="/gupiaorumen/" target="_blank"><span>股票入门</span></a></li>
+                                <li id="li3"><a href="/xuangujiqiao/" target="_blank"><span>选股技巧</span></a></li>
+                                <li id="li4"><a href="/mairujiqiao/" target="_blank"><span>买入技巧</span></a></li>
+                                <li id="li5"><a href="/gupiaomaichu/" target="_blank"><span>股票卖出</span></a></li>
+                                <li id="li6"><a href="/gupiaokanpan/" target="_blank"><span>股票看盘</span></a></li>
+                                <li id="li7"><a href="/gupiaogenzhuang/" target="_blank"><span>股票跟庄</span></a></li>
+                                <li id="li11"><a href="/duanxianjiqiao/" target="_blank"><span>短线技巧</span></a></li>
+                                <li id="li8"><a href="/chaogujiqiao/" target="_blank"><span>炒股技巧</span></a></li>
+                                <li id="li8"><a href="/kxiantufenxi/" target="_blank"><span>K线图分析</span></a></li>
+                                <li id="li8"><a href="/jizhuzhibiao/" target="_blank"><span>技术指标</span></a></li>
+                            </ul>
+                    </div>
+            </div>
+        </div>
+<div class="snd_nav">
+<p></p>
+</div>
+</div>
+        </div>
+        <div class="page clearfix">
+            <div class="mb o-v">
+                <div class="col14">
+                    <div class="br o-v">
+                        <!--<div class="t_nav">当前位置：<a href="/">首页</a> > <a href="/" target="_blank">财经资讯</a> > <a href="/" target="_blank">股市直播室</a> > <b class="red">栏目</b></div>-->
+                        <div class="text_content">
+                            <div class="bd" id="tab_1_1">                   
+                                <div class="artlist">
+                                    <ul>
+                                        {% for article in articles %}
+                                            <li><h2><a href="/{{ slug }}/{{ article.slug }}.html" target="_blank">{{ article.title }}</a></h2>
+                                              <span class="gray">{{ article.dateandtime|date:'Y-m-d H:i:s' }} 作者：{{ article.writer }}</span>
+                                            <p>{{ article.summary }}<span class="red"><a href="/{{ slug }}/{{ article.slug }}.html" target="_blank">[全文]</a></span></p>
+                                            
+                                            <span class="keywords">文章关键词：
+                                                    <a href="/{{ slug }}/{{ article.slug }}.html">{{ article.keywords }}</a>
+                                            </span></li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                                 <div class="">
+                                     {% if articles.has_previous %}
+                                         <a href="?page={{ articles.previous_page_number }}" class='current'>上一页</a>
+                                     {% endif %}
+                                     {{ articles.number }}  {{ articles.paginator.num_pages }}
+                                     {% if articles.has_next %}
+                                         <a href="?page={{ articles.next_page_number }}" class="current">下一页</a>
+                                     {% endif %} 页次：{{ articles.paginator.num_pages }}页 总计：{{ articles.paginator.count }}条   </p>
+                                 </div>
+                            </div>
+                            <div id="tab_1_2" style="display:none;" class="quolist"></div>
+                            <!--<div class="textKeyword"><span class="red">文章关键词：</span>   <span class="gray">点击关键词查看更多资讯</span></div>-->
+                            <div class="textTools mb">
+                                <span class="fr">
+                                    <a href="javascript:f_ShowEmailDiv();" class="email">发送到email</a>
+                                    <a href="javascript:copyToClipboard();" class="copylink">复制链接</a>
+                                    <a href="javascript:copyToClipboard();" class="rss">订阅</a>
+                                    <a href="javascript:f_Print();" class="print">打印</a>
+                                </span>
+                                <!-- Baidu Button BEGIN -->
+                                    <div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+                                    <a class="bds_tsina">新浪微博</a>
+                                    <a class="bds_qzone">QQ空间</a>
+                                    <a class="bds_tqq">腾讯微博</a>
+                                    <a class="bds_renren">人人网</a>
+                                    <a class="bds_baidu">百度搜藏</a>
+                                    </div>
+                                    <script type="text/javascript" id="bdshare_js" data="type=tools&amp;mini=1&amp;uid=6635071" ></script>
+                                    <script type="text/javascript" id="bdshell_js"></script>
+                                    <script type="text/javascript">
+                                    document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000);
+                                    </script>
+                                    <!-- Baidu Button END -->
+                            </div>
+    </div>          
+                   
+</div>
+</div>
+{% include "right.html" %}
+</div>
+</div>
+<div class="footer">
+<div><a href="/static/mianzhe.html" rel="nofollow" target="_blank">免责声明</a>　|　<a href="/static/about.html" rel="nofollow" target="_blank">关于我们</a>　|　<a href="/" rel="nofollow" target="_blank">媒体合作</a>　|　<a href="/static/ad.html" rel="nofollow" target="_blank">广告服务</a>　|　<a href="/static/contact.html" target="_blank" rel="nofollow">联系我们</a>　|　<a href="/" target="_blank" rel="nofollow">意见反馈</a></div>
+<p>新财网所载文章、数据仅供参考，使用前请核实，风险自负</p>
+<p>Copyright©Xincai888.com Information Technology Ltd. All rights reserved. </p>
+<img src="/static/images/icp1.gif" border="0"><img src="/static/images/icp2.png" border="0"><img src="/static/images/icp3.jpg" border="0"></div>
+<div style="display:none">
+</div>
+<script type="text/javascript" src="/static/js/analytics_event.js"></script>
+</body>
+</html>

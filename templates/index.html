@@ -1,0 +1,230 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>股票入门_股票学习网站_股票入门基础知识_炒股入门知识-新财网</title>
+        <meta name="description" content="新财网(www.xincai888.com)为广大股民提供炒股入门知识、股票入门、选股技巧、股票卖出、短线技巧、股票技术分析等是学习股票基础知识最好的股票学习网站。" />
+        <meta name="keywords" content="股票入门,股票学习,股票学习网站,股票入门，炒股入门知识" />
+        <meta name="google-site-verification" content="-oOw_XHFrR4rnrdyICuQn6slOETzYLo0RJovqA6GmJE" />
+        <link href="/static/css/main.css" rel="stylesheet" type="text/css" />
+        <link href="/static/css/ele.css" type="text/css" rel="stylesheet" media="all" />
+        <link href="/static/css/lib.css" type="text/css" rel="stylesheet" media="all" />
+        <link rel="stylesheet" href="/static/css/base.css" type="text/css" />
+        <link rel="stylesheet" href="/static/css/header.css" type="text/css" />
+        {% include "analytics.html" %}
+        {% include "piecharts.html" %}
+    </head>
+    <body>
+<div class="header">
+ <div class="area clearfix">
+    <div class="logo">
+        <div><h1 style="font-size:24px;"><a href="/">新财网</a></h1></div>
+        <div><p>专业，源于专注</p></div>
+    </div>
+    <div class="login_info fr" id="NotLogin">
+            <p>咨询热线：0571-88888888</p>
+            <p>http://www.xincai888.com</p>
+    </div>
+ </div>
+</div>
+
+<div class="menu" style="height:auto;">
+    <div class="area">
+        <div class="menu">
+    <div class="area">
+        <div class="nav">
+            <ul class="clearfix">
+                <li id="li0"><a href="/" target="_blank"><span>首页</span></a></li>
+                <li id="li1"><a href="/gupiaorumen/" target="_blank"><span>股票入门</span></a></li>
+                <li id="li3"><a href="/xuangujiqiao/" target="_blank"><span>选股技巧</span></a></li>
+                <li id="li4"><a href="/mairujiqiao/" target="_blank"><span>买入技巧</span></a></li>
+                <li id="li5"><a href="/gupiaomaichu/" target="_blank"><span>股票卖出</span></a></li>
+                <li id="li6"><a href="/gupiaokanpan/" target="_blank"><span>股票看盘</span></a></li>
+                <li id="li7"><a href="/gupiaogenzhuang/" target="_blank"><span>股票跟庄</span></a></li>
+                <li id="li11"><a href="/duanxianjiqiao/" target="_blank"><span>短线技巧</span></a></li>
+                <li id="li8"><a href="/chaogujiqiao/" target="_blank"><span>炒股技巧</span></a></li>
+                <li id="li8"><a href="/kxiantufenxi/" target="_blank"><span>K线图分析</span></a></li>
+                <li id="li8"><a href="/jizhuzhibiao/" target="_blank"><span>技术指标</span></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="bnr" id="gupiaoxt3">
+              <!--<img src="/static/images/728-90.jpg">-->
+</div>
+<div id="Container">
+            <div class="SchsiderL">
+                <div class="borderR">
+                    <!-- 广告轮换图片 -->
+                    <div class="Schpic marb">
+                       <div class="pics">
+                            <ul class="slider">
+                                <li id="gupiaoxt1">
+                                    <a target="_blank" href="/">
+                                    <img width="300" height="186" src="/static/images/lb1.jpg">
+                                    </a>
+                                </li>
+                            </ul>
+                          </div>
+                    </div>
+    <!--选股技巧-->
+        <div class="Otitle"><span class="more"><a href="/xuangujiqiao/" target="_blank">更多</a></span><span class="f14px red"><a href="/xuangujiqiao/" target="_blank">选股技巧</a></span></div>
+            <div class="list over280">
+                <ul>
+                    {% for article in xuangujiqiaoArticles %}
+                    <li>【选股技巧】<a href="/{{ article.className }}/{{ article.slug }}.html" target="_blank">{{ article.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+    <!--买入技巧-->
+        <div class="Otitle"><span class="more"><a href="/mairujiqiao/" target="_blank">更多</a></span><span class="f14px red"><a href="/mairujiqiao/" target="_blank">买入技巧</a></span></div>
+            <div class="list over280">
+                 <ul>
+                    {% for article in mairujiqiaoArticles %}
+                    <li>【买入技巧】<a href="/{{ article.className }}/{{ article.slug }}.html" target="_blank">{{ article.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+    <!--股票卖出-->
+        <div class="Otitle"><span class="more"><a href="/gpiaomaichu/" target="_blank">更多</a></span><span class="f14px red"><a href="/gupiaomaichu/" target="_blank">股票卖出</a></span></div>
+            <div class="list over280">
+                <ul>
+                    {% for article in gupiaomaichuArticles %}
+                    <li>【股票卖出】<a href="/{{ article.className }}/{{ article.slug }}.html" target="_blank">{{ article.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+<!--股票看盘-->
+    <div class="Otitle"><span class="more"><a href="/gupiaokanpan/" target="_blank">更多</a></span><span class="f14px red"><a href="/gupiaokanpan/ target="_blank">股票看盘</a></span></div>
+        <div class="list over280">
+                <ul>
+                        {% for article in gupiaokanpanArticles %}
+                        <li>【股票看盘】<a href="/{{ article.className }}/{{ article.slug }}.html" target="_blank">{{ article.title }}</a></li>
+                        {% endfor %}
+                </ul>
+        </div>
+    </div>
+</div>
+    <div class="Schmain">
+    <!-- 每日一招 -->
+    <!--炒股心得-->
+    <div class="title red"><span class="more"><a href="/chaoguxinde/" target="_blank">更多</a></span><a href="/chaoguxinde/" target="_blank"  class="red">炒股心得</a><span class="eng">Stock Experience</span></div>
+        <div class="topiclist marb">
+            <ul>
+                {% for article in chaoguxindeArticles %}
+                <li>【炒股心得】<a href="/{{ article.className }}/{{ article.slug }}.html" target="_blank">{{ article.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    <!--股票入门-->
+        <div class="title tit10"><span class="more"><a href="/gupiaorumen/" target="_blank">更多</a></span><a href="/gupiaorumen/" target="_blank" class="red">股票入门</a><span class="eng">Getting Started</span></div>
+            <div class="topiclist marb">
+                <ul>
+                    {% for article in gupiaorumenArticles %}
+                        <li>【股票入门】<a href="/{{ article.className }}/{{ article.slug }}.html" target="_blank">{{ article.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+    <!--高手进阶-->
+        <div class="title tit10"><span class="more"><a href="/jizhuzhibiao/" target="_blank">更多</a></span><a href="/jizhuzhibiao/" target="_blank" class="red">股票技术分析</a><span class="eng">Stock Technical Analysis</span></div>
+            <div class="topiclist marb">
+                <ul>
+                        {% for article in jizhuzhibiaoArticles %}
+                        <li>【股票技术分析】<a href="/{{ article.className }}/{{ article.slug }}.html" target="_blank">{{ article.title }}</a></li>
+                        {% endfor %}
+                </ul>
+            </div>
+    <!--股票跟庄-->
+        <div class="title tit10"><span class="more"><a href="/gupiaogenzhuang/" target="_blank">更多</a></span><a href="/gupiaogenzhuang/" target="_blank" class="red">股票跟庄</a><span class="eng">Stock Village</span></div>
+            <div class="topiclist">
+                <ul>
+                        
+                            {% for article in gupiaogenzhuangArticles %}
+                        <li>【股票跟庄】<a href="/{{ article.className }}/{{ article.slug }}.html" target="_blank">{{ article.title }}</a></li>
+                         {% endfor %}
+                </ul>
+            </div>
+
+            </div>
+<div class="SchsiderR">
+    <!-- K线图分析 -->
+    <div class="twt graybdr marb">
+        <div class="topiclist">
+            <!--<ul>
+                <li><img src="/static/images/300-250.jpg" /></li>
+            </ul>-->
+            <!-- 新财网首页300250 -->
+                <div id='div-gpt-ad-1367563385668-0' style='width:300px; height:250px;margin:auto;'>
+                <script type='text/javascript'>
+                googletag.cmd.push(function() { googletag.display('div-gpt-ad-1367563385668-0'); });
+                </script>
+                </div>
+        </div>
+    </div>
+    <!-- 短线技巧 -->
+        <div class="twt graybdr marb">
+                <div class="title tit10"><span class="more"><a href="/duanxianjiqiao/" target="_blank">更多</a></span><a href="/duanxianjiqiao/" target="_blank" class="red">短线技巧</a><span class="eng">Mental Remodeling</span></div>
+        <div class="topiclist">
+            <ul>
+                    {% for article in duanxianjiqiaoArticles %}
+                    <li>【短线技巧】<a href="/{{ article.className }}/{{ article.slug }}.html" target="_blank">{{ article.title }}</a></li>
+                    {% endfor %}
+            </ul>
+        </div>
+</div>
+<!-- K线图分析 -->
+    <div class="twt graybdr marb">
+        <div class="title tit10"><span class="more"><a href="/kxiantufenxi/" target="_blank">更多</a></span><a href="/kxiantufenxi/" target="_blank" class="red">K线图分析</a><span class="eng">K-Line Diagram Analysis</span></div>
+        <div class="topiclist">
+            <ul>
+                {% for article in kxiantufenxiArticles %}
+                <li>【K线图分析】<a href="/{{ article.className }}/{{ article.slug }}.html" target="_blank">{{ article.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+<!-- 炒股技巧 -->
+    <div class="twt graybdr marb">
+        <div class="title tit10"><span class="more"><a href="/chaogujiqiao/" target="_blank">更多</a></span><a href="/chaogujiqiao/" target="_blank" class="red">炒股技巧</a><span class="eng">Stock Tips </span></div>
+        <div class="topiclist">
+            <ul>
+                {% for article in chaogujiqiaoArticles %}
+                <li>【炒股技巧】<a href="/{{ article.className }}/{{ article.slug }}.html" target="_blank">{{ article.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+</div>
+</div>
+ <br class="clear" />
+            <div class="bnr" id="gupiaoxt3">
+              <!-- 新财网72890底部 -->
+                <div id='div-gpt-ad-1367551301343-0' style='width:728px; height:90px;clear: both;display: block;margin:auto;'>
+                <script type='text/javascript'>
+                googletag.cmd.push(function() { googletag.display('div-gpt-ad-1367551301343-0'); });
+                </script>
+                </div>
+            </div>
+            <div>
+                <p>友情链接：</p>
+                <span>
+                    {% for site in sites %}
+                    <a href="{{ site.domain }}" target="_blank">{{ site.name }}</a> 
+                    {% endfor %}
+                </span>
+            </div>
+</div>
+</div>
+<div class="footer">
+<div><a href="/static/mianzhe.html" rel="nofollow" target="_blank">免责声明</a>　|　<a href="/static/about.html" rel="nofollow" target="_blank">关于我们</a>　|　<a href="/" rel="nofollow" target="_blank">媒体合作</a>　|　<a href="/static/ad.html" rel="nofollow" target="_blank">广告服务</a>　|　<a href="/static/contact.html" target="_blank" rel="nofollow">联系我们</a>　|　<a href="/" target="_blank" rel="nofollow">意见反馈</a></div>
+<p>新财网所载文章、数据仅供参考，使用前请核实，风险自负</p>
+<p>Copyright©Xincai888.com Information Technology Ltd. All rights reserved. </p>
+<img src="/static/images/icp1.gif" border="0"><img src="/static/images/icp2.png" border="0"><img src="/static/images/icp3.jpg" border="0"></div>
+<div style="display:none">
+</div>
+</div> 
+</body>
+</html>

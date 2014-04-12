@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>
+        Google Visualization API Sample
+    </title>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        google.load("visualization", "1", {packages:["corechart"]});
+        google.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['日期', 'Alexa总排名', 'Alexa日排名',],
+            {% for a in alexa %}
+                ['{{ a.rankdate|date:'Y-m-d' }}',{{ a.alexasum }},{{ a.alexaday }}],
+            {% endfor %}
+            ]);
+
+            var options = {
+                title: '{{ url }}网站Alexa排名统计',
+                hAxis: {title: '日期', titleTextStyle: {color: 'red'}}
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+        }
+        google.setOnLoadCallback(prChart);
+        function prChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['日期','PR'],
+            {% for a in alexa %}
+                ['{{ a.rankdate|date:'Y-m-d' }}',{{ a.pr }}],
+            {% endfor %}
+            ]);
+
+            var options = {
+                title: '{{ url }}网站PR统计',
+                hAxis: {title: '日期', titleTextStyle: {color: 'red'}}
+            };
+
+            var chart = new google.visualization.ColumnChart(document.getElementById('chart_pr'));
+            chart.draw(data, options);
+        }
+    </script>
+    {% include "analytics.html" %}
+</head>
+<body>
+<div id="chart_div" style="width: 900px; height: 500px;"></div>
+<div id='chart_pr' style="width: 900px;height: 80px;"></div>
+</body>
+</html>

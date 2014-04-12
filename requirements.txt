@@ -1,0 +1,9 @@
+python2-openpyxl export xlsx
+
+python-nvd3 Python Wrapper for NVD3 - It's time for beautiful charts
+
+https://github.com/areski/python-nvd3
+
+django-nvd3   Django wrapper for nvd3 - It's time for beautiful charts
+
+https://github.com/areski/django-nvd3

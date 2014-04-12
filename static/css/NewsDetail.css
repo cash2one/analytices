@@ -1,0 +1,58 @@
+﻿b {line-height:38px; height:38px;font-size:14px; font-weight:bold;}
+.right{float:right; display:inline}
+/*行情*/
+.quolist { overflow:hidden; zoom:1}
+.quolist ul {}
+.quolist ul li {width:334px;float:left; border-bottom:#e2e2e2 dashed 1px; text-align:center}
+.quolist ul li p { line-height:24px; text-align:left; text-indent:0;padding:0 10px}
+.quolist ul li p span a {margin-left:10px; color:#049; font-size:12px; text-decoration:underline}
+.quolist ul li img {text-align:center;margin:0 auto 10px}
+
+.TabEmail { font-size:14px; line-height:42px; border-left:#c9c9c9 solid 1px; border-top:#c9c9c9 solid 1px;}
+.TabEmail td {line-height:42px; border-right:#c9c9c9 solid 1px; border-bottom:#c9c9c9 solid 1px;padding:0 5px;font-size:14px;}
+.TabEmail .bluebg { background-color:#eef3f9}
+.TabEmail .bluebg02 {background-color:#d1e2ed}
+.TabEmail span input { height:22px; line-height:22px; vertical-align:middle; color:#333; font-size:14px;padding:0 3px}
+.TabEmail a { font-size:12px; text-decoration:underline}
+.pubinput {border:#e2e2e2 solid 1px; border-top:#c3c3c3 solid 1px; border-left:#c3c3c3 solid 1px;width:660px; height:8em;line-height:18px; font-size:14px;}/*background:#fff url(/images/inputlogo.png) no-repeat center center;*/
+
+
+/*弹窗*/
+.Win { text-align:left;border:#e2e2e2 solid 1px;z-index:999; background-color:#fff;-moz-border-radius:6px;-khtml-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;-webkit-box-shadow:2px 2px 2px #e6e6e6;-moz-box-shadow:2px 2px 2px #e6e6e6;box-shadow:2px 2px 2px #e6e6e6;left:50%;
+top:50%;
+margin-left:-240px!important;/*FF IE7 该值为本身宽的一半 */
+margin-top:-180px!important;/*FF IE7 该值为本身高的一半*/
+margin-top:0px;
+position:fixed!important;/* FF IE7*/
+position:absolute;/*IE6*/
+_top:       expression(eval(document.compatMode &&
+            document.compatMode=='CSS1Compat') ?
+            documentElement.scrollTop + (document.documentElement.clientHeight-this.offsetHeight)/2 :/*IE6*/
+            document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);/*IE5 IE5.5*/}
+.bg,.popIframe {background-color: #000; display:none;
+width: 100%;
+height: 100%;
+left:0;
+top:0;/*FF IE7*/
+filter:alpha(opacity=50);/*IE*/
+opacity:0.5;/*FF*/
+z-index:1;
+position:fixed!important;/*FF IE7*/
+position:absolute;/*IE6*/
+_top:       expression(eval(document.compatMode &&
+            document.compatMode=='CSS1Compat') ?
+            documentElement.scrollTop + (document.documentElement.clientHeight-this.offsetHeight)/2 :/*IE6*/
+            document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);
+}
+.popIframe {
+filter:alpha(opacity=0);/*IE*/
+opacity:0;/*FF*/
+}
+.Win h2 { font-size:14px;line-height:30px; height:30px; padding:0 10px; background:url(/ZiXun/images/Cnavbg.png) repeat-x 0 -60px; font-weight:normal}
+.Win h2 span img {padding-top:7px; cursor:pointer}
+.winCon {padding:10px;}
+.ModFrame {line-height:30px;font-size:14px;}
+.ModFrame span input {vertical-align:middle}
+.ModFrame span input,.ModFrame select {height:20px; line-height:20px;margin:6px 5px 0;font-size:14px;color:#333}
+.ModFrame textarea {margin:6px 5px; width:372px; line-height:24px}
+.ModFrame .Tit {width:72px; text-align:right;font-size:14px; display:inline-block; vertical-align:top}

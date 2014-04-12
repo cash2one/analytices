@@ -1,0 +1,7 @@
+User-agent:  *
+Disallow: /admin/
+Disallow: /static/admin/
+Disallow: /static/admin_bootstrap/
+Disallow: /static/css/
+Disallow: /static/js/
+Sitemap: <http://www.xincai888.com/static/sitemap.xml>

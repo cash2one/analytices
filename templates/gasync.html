@@ -1,0 +1,26 @@
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-32376612-1']);
+		_gaq.push(['_setDomainName','suretoo.com']);
+		_gaq.push(['_addIgnoredRef','suretoo.com'])
+		_gaq.push(['_addOrganic','soso','w']);
+		_gaq.push(['_addOrganic', 'sogou','query']);
+		_gaq.push(['_addOrganic', 'youdao','q']);
+		_gaq.push(['_addOrganic', 'baidu', 'word']);
+		_gaq.push(['_addOrganic', 'baidu', 'q1']);
+		_gaq.push(['_addOrganic', 'm.baidu', 'word']);
+		_gaq.push(['_addOrganic', 'image.baidu', 'word']);
+		_gaq.push(['_trackPageview']);
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+	<script type="text/javascript">
+		function track_PageView(){
+			_gaq.push(['_trackPageview',{{ url }}]);
+		}
+	</script>
+<body onload="track_PageView()">
+</body>

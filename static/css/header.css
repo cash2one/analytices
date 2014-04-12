@@ -1,0 +1,39 @@
+.header,.menu{background-image:url(../images/bg_sprite.png);}
+
+.header{height:70px;background-color:#b40001;background-position:left top;background-repeat:repeat-x;}
+.header .area{width:990px;margin:0 auto;color:#fff;}
+.header .logo {margin:12px 0 0 8px;float:left;}
+.header .logo div,.header .logo h1{float:left;}
+.header .logo p{margin:4px 0 0 12px;line-height:1.2}
+.header .login_info{text-align:right;margin-top:12px}
+.header .login_info a{color:#fff;}
+.menu{height:36px;background-position:left -70px;background-repeat:repeat-x;}
+.menu .area{width:990px;margin:0 auto;position:relative;}
+.menu .nav li{float:left;color:#fff;font-size:14px;font-weight:700;position:relative;}
+.menu .nav a{display:inline-block;height:32px;margin-top:4px;color:#fff;}
+.menu .nav a:hover{color:#f00;text-decoration:none}
+.menu .nav a span{margin-top:8px;padding:0 12px;display:inline-block;border-right:1px solid #696969;line-height:1.2;cursor:pointer;}
+.menu .nav a span.nobr{border:0}
+.menu .nav .select a{background:#fff;text-decoration:none;color:#222;border-top-left-radius:2px;border-top-right-radius:2px;}
+.menu .nav .select span{border-right-color:#fff;}
+.menu .nav { background-image:none}
+
+.menu .serch{position:absolute;width:234px;height:26px;margin-top:5px;background:url(../images/h_serch.png) no-repeat left top;border-radius:2px;left:760px;top:33px;}
+.menu .serch .info{float:left;height:26px;width:64px;padding:0 6px;color:#7d7d7d;cursor:pointer;line-height:26px;position:relative;}
+.menu .serch .navlist{width:74px;border:1px solid #ccc;background-color:#fff;position:absolute;left:0;top:25px;box-shadow:1px 1px 8px rgba(0,0,0,0.2);}
+.menu  .navlist a{display:block;height:24px;padding:0 6px;color:#7d7d7d;line-height:24px;}
+.menu  .navlist a:hover{background-color:#555;text-decoration:none;border:0;color:#fff;}
+.menu .serch .input_tex{float:left;width:124px;height:26px;color:#bfbfbf;background-color:transparent;border:0;outline:none;line-height:26px}
+.menu .serch .input_btn{float:left;height:26px;width:26px;text-indent:-9999px;background-color:transparent;border:0;cursor:pointer;}
+
+.snd_nav { background:url(../images/snd_nav_bg.png) repeat-x; height:30px; }
+.snd_nav p {width:990px; margin:0 auto; color:#c7c7c7;line-height:30px;}
+.snd_nav p a {color:#333; margin:0 6px}
+
+/*footer*/
+.footer { color:#454545;text-align:center; border-top:#454545 solid 4px; line-height:200%,}
+.footer div { background-color:#454545; }
+.footer div,.footer div a {color:#fff}
+.footer img { margin:6px 10px}
+
+.header .logo a { color:#fff}
