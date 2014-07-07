@@ -1,4 +1,0 @@
-analytices
-==========
-
-analytices
